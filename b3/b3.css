@@ -1,0 +1,133 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #313642;
+}
+
+.vuong {
+    width: 140px;
+    height: 100px;
+    background: #d04a43;
+    position: absolute;
+    top: 50%;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+}
+
+.triangle1 {
+    position: relative;
+    border-bottom: 100px solid#e45e56;
+    rotate: 0deg;
+    transform: rotateY(180deg);
+    translate: 0 100px;
+    z-index: 99;
+}
+
+.triangle2 {
+    position: relative;
+    border-bottom: 100px solid#db4e49;
+    rotate: 0deg;
+    z-index: 99;
+}
+
+.triangle-wrapper {
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+    height: 200px;
+    transition: top 0.3s linear;
+}
+
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 53px solid #d04a43;
+    transform: translateY(-92px) rotate(180deg);
+    transition: transform 0.3s linear;
+    z-index: 99;
+}
+
+.triangle-wrapper:hover .triangle3 {
+    transform: translateY(-152px) rotateY(180deg);
+}
+
+.triangle-wrapper:hover {
+    top: 120px;
+}
+
+.triangle-wrapper:hover .wrap {
+    top: 12%;
+}
+
+.wrap {
+    position: absolute;
+    right: 7%;
+    top: 75%;
+    transition: top 0.3s 0.3s linear;
+}
+
+.square {
+    width: 120px;
+    height: 140px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.skews {
+    display: flex;
+    gap: 10px;
+}
+
+.skew {
+    height: 15px;
+    width: 10px;
+    background: #c66861;
+    transform: skewX(-20deg);
+}
+
+.cricle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #efcdce;
+    position: absolute;
+    right: 10%;
+    bottom: 32%;
+}
+
+.rectangle {
+    position: absolute;
+    top: 16%;
+    left: 4%;
+}
+
+.rectangle1 {
+    width: 60px;
+    height: 8px;
+    margin-bottom: 8px;
+    background: #c66861;
+}
+
+.rectangle2 {
+    width: 30px;
+    height: 8px;
+    background: #c66861;
+}

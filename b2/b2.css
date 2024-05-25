@@ -1,0 +1,33 @@
+.triangle-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86.6px solid red;
+    rotate: 180deg;
+    top: 100px;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.triangle:hover {
+    transform: rotateX(180deg);
+}
+
+.triangle4 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 40px solid #4387d0;
+    transform: translateY(-152px) rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+    z-index: 99;
+}
