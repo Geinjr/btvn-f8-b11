@@ -1,33 +1,81 @@
-.triangle-wrapper {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.btn {
+    cursor: pointer;
+    width: auto;
+    padding: 3px;
+    background: #fff;
+    border: 2px solid rgba(192, 192, 192, 0.905);
+}
+
+body {
+    background: #eee;
+}
+
+main {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arround {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
     position: relative;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 86.6px solid red;
-    rotate: 180deg;
-    top: 100px;
-
-    transition: transform 0.3s ease-in-out;
+button {
+    color: #000;
+    padding: 8px;
+    transition: 0.3s ease; /* Added 's' after 0.3 for seconds */
+    transition-property: background, color;
+    border: none;
+    background: transparent;
 }
 
-.triangle:hover {
-    transform: rotateX(180deg);
+.btn:nth-child(1),
+.btn:nth-child(2),
+.btn:nth-child(4),
+.btn:nth-child(5),
+.btn:nth-child(3) {
+    border-right: none;
 }
 
-.triangle4 {
-    width: 0;
-    height: 0;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent;
-    border-bottom: 40px solid #4387d0;
-    transform: translateY(-152px) rotate(180deg);
-    transition: transform 0.2s ease-in-out;
-    z-index: 99;
+input:checked ~ button {
+    background: #3298db;
+    color: #fff;
+}
+
+.content {
+    width: 92.6%;
+    background: #fff;
+    padding: 20px;
+    height: 260px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 103%;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    transition: all 0.4s linear;
+    /* transition-property: transform, opacity, visibility; */
+}
+
+input:checked ~ .content {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg);
 }
