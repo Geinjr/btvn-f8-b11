@@ -69,8 +69,10 @@ input:checked ~ button {
     visibility: hidden;
     opacity: 0;
     transform-origin: top;
-    transform: rotateX(-90deg);
-    transition: all 0.4s linear;
+    transform: perspective(50px) rotateX(-90deg);
+    transition: 0.8s ease-in-out;
+    transition-property: opacity, transform, visibility;
+
     /* transition-property: transform, opacity, visibility; */
 }
 

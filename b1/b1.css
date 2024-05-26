@@ -50,16 +50,30 @@ h2 {
     position: absolute;
     transition: 0.3s linear;
     transition-property: width, height, border-radius;
-    top: -17%;
+    top: -63px;
     left: -5%;
 }
 input:checked ~ .cover {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
     inset: 0;
     border-radius: 0;
     transition-property: width, height, border-radius;
+}
+
+input:checked ~ label .logo .fa-bars {
+    transform: rotate(180deg);
+    visibility: hidden;
+    opacity: 0;
+}
+
+input:checked ~ label .logo .fa-arrow-left {
+    position: absolute;
+    top: 30px;
+    left: 3%;
+    opacity: 1;
+    visibility: visible;
 }
 
 .fa-bars {
@@ -73,24 +87,14 @@ input:checked ~ .cover {
     left: 3%;
 }
 
-input:checked ~ .logo .fa-bars {
-    transform: rotate(180deg);
-    visibility: hidden;
-    opacity: 0;
-}
-
 .fa-arrow-left {
     opacity: 0;
     visibility: hidden;
     position: absolute;
 }
 
-input:checked ~ .logo .fa-arrow-left {
-    position: absolute;
-    top: 30px;
-    left: 3%;
-    opacity: 1;
-    visibility: visible;
+input:checked ~ label .logo ul {
+    display: block;
 }
 
 ul {
@@ -99,10 +103,6 @@ ul {
     top: 76px;
     left: 0;
     display: none;
-}
-
-input:checked ~ .logo ul {
-    display: block;
 }
 
 li {
@@ -124,7 +124,7 @@ li:hover a {
 
 a {
     position: relative;
-    left: 67px;
+    left: 70px;
     text-decoration: none;
     color: #76c2e6;
 }
